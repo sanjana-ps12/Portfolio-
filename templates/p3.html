@@ -3,36 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Portfolio</title>
-     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+    <title>College Bus Reservation System - Sanjana's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
-     <nav>
-        <a href="/project">Back</a>
+<body data-theme="light">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+    
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/project" class="active">Projects</a>
     </nav>
-    <section id="projects">
-    <div class="pr1">
-        <h2>College Bus Management System</h2>
-        <p>
-      This is a web-based project developed to simplify and manage the daily college bus transportation system for students.
-      The system allows students to <strong>register, book bus seats, and make fare payments</strong> with ease. It helps the admin manage buses, bookings, and student data efficiently.
-    </p>
 
-    <h3>Key Features:</h3>
-    <ul>
-      <li><strong>User Registration & Login:</strong> Students can register and log in to their personal dashboard.</li>
-      <li><strong>Bus Seat Booking:</strong> Allows students to view available buses and book seats in advance.</li>
-      <li><strong>Distance-based Fare Calculation:</strong> Automatically calculates travel fare based on the student’s address.</li>
-      <li><strong>QR Code Boarding System:</strong> Generates a QR code to confirm seat booking during boarding.</li>
-      <li><strong>UPI-Based Payment:</strong> Students can top up their balance and pay bus fare digitally.</li>
-      <li><strong>Real-time Bus Notifications:</strong> Sends updates about bus location and schedule changes.</li>
-    </ul>
+    <div class="project-detail-container">
+        <a href="/project" class="back-link">← Back to Projects</a>
+        
+        <div class="project-detail-card">
+            <h2>College Bus Reservation System</h2>
+            <div class="project-tech" style="margin: 20px 0;">
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">Python</span>
+            </div>
+            
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text); margin-bottom: 30px;">
+                This is a web-based project developed to simplify and manage the daily college bus transportation system for students.
+                The system allows students to <strong>register, book bus seats, and make fare payments</strong> with ease. It helps the admin manage buses, bookings, and student data efficiently.
+            </p>
 
-    <p>
-      This project was developed using <strong>HTML, CSS (frontend), Flask (Python backend), and MySQL (database)</strong>. It helps reduce manual work, improve tracking, and enhance the overall student transport experience.
-    </p>
-        <a href="https://github.com/sanjana-ps12/College-Bus-Management-System" target="_blank">View Project</a>
-    </div>  
-    </section>
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>User Registration & Login:</strong> Students can register and log in to their personal dashboard.</li>
+                <li><strong>Bus Seat Booking:</strong> Allows students to view available buses and book seats in advance.</li>
+                <li><strong>Distance-based Fare Calculation:</strong> Automatically calculates travel fare based on the student's address.</li>
+                <li><strong>QR Code Boarding System:</strong> Generates a QR code to confirm seat booking during boarding.</li>
+                <li><strong>UPI-Based Payment:</strong> Students can top up their balance and pay bus fare digitally.</li>
+                <li><strong>Real-time Bus Notifications:</strong> Sends updates about bus location and schedule changes.</li>
+            </ul>
+
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text); margin-top: 30px;">
+                This project was developed using <strong>HTML, CSS (frontend), Flask (Python backend), and MySQL (database)</strong>. It helps reduce manual work, improve tracking, and enhance the overall student transport experience.
+            </p>
+
+            <div style="margin-top: 40px; text-align: center;">
+                <a href="https://github.com/sanjana-ps12/College-Bus-Management-System" target="_blank" class="project-link">View Project on GitHub →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sanjana. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+    </script>
 </body>
 </html>

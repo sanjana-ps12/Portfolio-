@@ -3,27 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
-    <style>
-    nav{
-    width: 220px;
-    background-color: aliceblue;
-    padding: 2px; 
-    }
-</style>
+    <title>Sanjana's Portfolio - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
-    <main>
+<body data-theme="light">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+    
     <nav>
-        <a href="/">Home</a>
+        <a href="/" class="active">Home</a>
         <a href="/about">About</a>
-        <a href="/project">Project</a>
+        <a href="/project">Projects</a>
     </nav>
-    <h1 align="center">SANJANA's PORTFOLIO</h1>
+
+    <div class="home-container">
+        <div class="home-background" style="background-image: url('{{ url_for('static', filename='pp.jpg') }}');"></div>
+        <div class="home-content">
+            <h1>Sanjana's Portfolio</h1>
+            <p>AI & Machine Learning Enthusiast</p>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2025 Sanjana. All rights reserved.</p>
     </footer>
-</main>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
