@@ -208,19 +208,19 @@ nav a.active {
     padding: 100px 30px 50px;
 }
 
-.about-layout {
+/* Top Section: Image and About Me side by side */
+.about-top-section {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
     align-items: start;
+    margin-bottom: 30px;
 }
 
 /* Profile Image */
 .profile-image-wrapper {
-    position: sticky;
-    top: 120px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
@@ -239,67 +239,47 @@ nav a.active {
     box-shadow: 0 15px 40px rgba(108, 99, 255, 0.3);
 }
 
-/* About Content Wrapper */
-.about-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* Standalone Info Sections (Contact & About Me) */
-.info-section-standalone {
-    margin-bottom: 0;
-    padding: 0;
-    border: none;
-}
-
-/* Transparent Box with Hover Effect */
-.info-box-transparent {
+/* Frosted Glass Box - Consistent styling for all boxes */
+.frosted-box {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 16px;
-    padding: 32px;
+    padding: 24px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 2px solid rgba(108, 99, 255, 0.2);
+    border-left: 4px solid #6C63FF;
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.4s ease;
 }
 
-.info-box-transparent.visible {
+.frosted-box.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.info-box-transparent:hover {
+.frosted-box:hover {
     background: rgba(108, 99, 255, 0.15);
-    border-color: rgba(108, 99, 255, 0.5);
+    border-left-color: #6C63FF;
     box-shadow: 0 12px 40px rgba(108, 99, 255, 0.25);
     transform: translateY(-5px);
 }
 
-[data-theme="dark"] .info-box-transparent {
+[data-theme="dark"] .frosted-box {
     background: rgba(26, 26, 26, 0.2);
-    border-color: rgba(108, 99, 255, 0.3);
+    border-left-color: #6C63FF;
 }
 
-[data-theme="dark"] .info-box-transparent:hover {
+[data-theme="dark"] .frosted-box:hover {
     background: rgba(108, 99, 255, 0.2);
-    border-color: rgba(108, 99, 255, 0.6);
+    border-left-color: #6C63FF;
 }
 
-/* Info Sections */
-.info-section {
-    margin-bottom: 32px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(108, 99, 255, 0.1);
-}
-
-.info-section:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+/* Content Grid: All other sections */
+.about-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 .section-header {
@@ -436,24 +416,22 @@ nav a.active {
 
 /* Responsive Design for About Page */
 @media (max-width: 968px) {
-    .about-layout {
+    .about-top-section {
         grid-template-columns: 1fr;
         gap: 30px;
     }
 
     .profile-image-wrapper {
-        position: relative;
-        top: 0;
         display: flex;
         justify-content: center;
     }
 
     .profile-image {
-        max-width: 100%;
-        max-width: 300px;
+        max-width: 280px;
     }
 
-    .about-content-wrapper {
+    .about-content-grid {
+        grid-template-columns: 1fr;
         gap: 25px;
     }
 }
@@ -463,8 +441,8 @@ nav a.active {
         padding: 80px 20px 30px;
     }
 
-    .info-box-transparent {
-        padding: 24px;
+    .frosted-box {
+        padding: 20px;
     }
 
     .section-header {
@@ -477,6 +455,10 @@ nav a.active {
     .experience-list,
     .certificates-list {
         font-size: 0.95rem;
+    }
+
+    .profile-image {
+        max-width: 250px;
     }
 }
 

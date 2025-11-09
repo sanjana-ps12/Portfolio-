@@ -16,76 +16,74 @@
     </nav>
 
     <div class="about-container">
-        <div class="about-layout">
-            <!-- Left Column: Profile Image -->
+        <!-- Top Section: Image and About Me side by side -->
+        <div class="about-top-section">
+            <!-- Profile Image -->
             <div class="profile-image-wrapper">
                 <img src="{{ url_for('static', filename='imag.jpg') }}" alt="Sanjana" class="profile-image">
             </div>
 
-            <!-- Right Column: Content -->
-            <div class="about-content-wrapper">
-                <!-- Contact Section - Outside Box -->
-                <div class="info-section-standalone">
-                    <h3 class="section-header">Contact</h3>
-                    <div class="contact-info">
-                        <p>📍 Udupi, Karnataka</p>
-                        <p>📞 8310718550</p>
-                        <p>✉️ sanjanaps2005@gmail.com</p>
-                    </div>
+            <!-- About Me Box -->
+            <div class="frosted-box fade-in">
+                <h3 class="section-header">About Me</h3>
+                <p class="about-text">My name is Sanjana P S. I'm a 3rd-year B.E. student in Artificial Intelligence and Machine Learning with a CGPA of 8.7/10. Passionate about building intelligent solutions, I've developed projects like a Smart Traffic Management System and Deepfake Detection. Skilled in Python and Web Development, I combine strong technical skills with teamwork and leadership through academic projects and hackathon participation.</p>
+            </div>
+        </div>
+
+        <!-- Content Sections: Each in separate frosted boxes -->
+        <div class="about-content-grid">
+            <!-- Contact Box -->
+            <div class="frosted-box fade-in">
+                <h3 class="section-header">Contact</h3>
+                <div class="contact-info">
+                    <p>📍 Udupi, Karnataka</p>
+                    <p>📞 8310718550</p>
+                    <p>✉️ sanjanaps2005@gmail.com</p>
                 </div>
+            </div>
 
-                <!-- About Me Section - Outside Box -->
-                <div class="info-section-standalone">
-                    <h3 class="section-header">About Me</h3>
-                    <p class="about-text">I'm a 3rd-year B.E. student in Artificial Intelligence and Machine Learning with a CGPA of 8.7/10. Passionate about building intelligent solutions, I've developed projects like a Smart Traffic Management System and Deepfake Detection. Skilled in Python, and Web Development, I combine strong technical skills with teamwork and leadership through academic projects and hackathon participation.</p>
+            <!-- Skills Box -->
+            <div class="frosted-box fade-in">
+                <h3 class="section-header">Skills</h3>
+                <div class="skills-content">
+                    <p><strong>Programming Languages:</strong> Python, Java, C, SQL</p>
+                    <p><strong>Web Development:</strong> HTML5, CSS, JavaScript</p>
+                    <p><strong>Design Tools:</strong> Figma</p>
+                    <p><strong>Core Concepts:</strong> Artificial Intelligence, Data Handling</p>
+                    <p><strong>Soft Skills:</strong> Leadership and Team Coordination, Project Management, Problem-Solving</p>
+                    <p><strong>Languages Known:</strong> English, Kannada, Malayalam</p>
                 </div>
+            </div>
 
-                <!-- Transparent Box with Skills, Education, Experience, Certificates -->
-                <div class="info-box-transparent fade-in">
-                    <!-- Skills Section -->
-                    <div class="info-section">
-                        <h3 class="section-header">Skills</h3>
-                        <div class="skills-content">
-                            <p><strong>Programming Languages:</strong> Python, Java, C, SQL</p>
-                            <p><strong>Web Development:</strong> HTML5, CSS, JavaScript</p>
-                            <p><strong>Design Tools:</strong> Figma</p>
-                            <p><strong>Core Concepts:</strong> Artificial Intelligence, Data Handling</p>
-                            <p><strong>Soft Skills:</strong> Leadership and Team Coordination, Project Management, Problem-Solving</p>
-                            <p><strong>Languages Known:</strong> English, Kannada, Malayalam</p>
-                        </div>
-                    </div>
-
-                    <!-- Education Section -->
-                    <div class="info-section">
-                        <h3 class="section-header">Education</h3>
-                        <div class="education-content">
-                            <p><strong>CGPA:</strong> 8.7 / 10</p>
-                            <p><strong>Duration:</strong> 2023 – 2027</p>
-                            <p><strong>Degree:</strong> Bachelor of Engineering (B.E.) in Artificial Intelligence and Machine Learning</p>
-                            <p><strong>Institute:</strong> Shri Madhwa Vadiraja Institute of Technology and Management</p>
-                        </div>
-                    </div>
-
-                    <!-- Experience Section -->
-                    <div class="info-section">
-                        <h3 class="section-header">Experience</h3>
-                        <ul class="experience-list">
-                            <li><strong>Project Leadership:</strong> Led and coordinated multiple team-based AI/ML projects, ensuring timely completion and effective collaboration.</li>
-                            <li><strong>Hackathon Participation:</strong> Developed innovative ML solutions for deepfake detection and presented AI concepts effectively to diverse audiences.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Certificates & Awards Section -->
-                    <div class="info-section">
-                        <h3 class="section-header">Certificates & Awards</h3>
-                        <ul class="certificates-list">
-                            <li>Responsive Web Development with HTML5, CSS3, JavaScript — <em>Infosys Springboard</em></li>
-                            <li>Introduction to Artificial Intelligence — <em>LinkedIn Learning</em></li>
-                            <li>Python, JavaScript, SQL Certification — <em>HackerRank</em></li>
-                            <li><strong>Academic Recognition:</strong> Letter of Appreciation for Outstanding Academic Performance in Semester Examinations.</li>
-                        </ul>
-                    </div>
+            <!-- Education Box -->
+            <div class="frosted-box fade-in">
+                <h3 class="section-header">Education</h3>
+                <div class="education-content">
+                    <p><strong>CGPA:</strong> 8.7 / 10</p>
+                    <p><strong>Duration:</strong> 2023 – 2027</p>
+                    <p><strong>Degree:</strong> Bachelor of Engineering (B.E.) in Artificial Intelligence and Machine Learning</p>
+                    <p><strong>Institute:</strong> Shri Madhwa Vadiraja Institute of Technology and Management</p>
                 </div>
+            </div>
+
+            <!-- Experience Box -->
+            <div class="frosted-box fade-in">
+                <h3 class="section-header">Experience</h3>
+                <ul class="experience-list">
+                    <li><strong>Project Leadership:</strong> Led and coordinated multiple team-based AI/ML projects, ensuring timely completion and effective collaboration.</li>
+                    <li><strong>Hackathon Participation:</strong> Developed innovative ML solutions for deepfake detection and presented AI concepts effectively to diverse audiences.</li>
+                </ul>
+            </div>
+
+            <!-- Certificates & Awards Box -->
+            <div class="frosted-box fade-in">
+                <h3 class="section-header">Certificates & Awards</h3>
+                <ul class="certificates-list">
+                    <li>Responsive Web Development with HTML5, CSS3, JavaScript — <em>Infosys Springboard</em></li>
+                    <li>Introduction to Artificial Intelligence — <em>LinkedIn Learning</em></li>
+                    <li>Python, JavaScript, SQL Certification — <em>HackerRank</em></li>
+                    <li><strong>Academic Recognition:</strong> Letter of Appreciation for Outstanding Academic Performance in Semester Examinations.</li>
+                </ul>
             </div>
         </div>
     </div>

@@ -26,6 +26,10 @@ def p2():
 def p3():
   return render_template('p3.html')
 
+@app.route('/p4')
+def p4():
+  return render_template('p4.html')
+
 
 if __name__ == '__main__':
   app.run(debug = True)

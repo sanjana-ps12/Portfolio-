@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection System - Sanjana's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body data-theme="light">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+    
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/project" class="active">Projects</a>
+    </nav>
+
+    <div class="project-detail-container">
+        <a href="/project" class="back-link">← Back to Projects</a>
+        
+        <div class="project-detail-card">
+            <h2>Deepfake Detection System</h2>
+            <div class="project-tech" style="margin: 20px 0;">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">TensorFlow</span>
+                <span class="tech-badge">Keras</span>
+                <span class="tech-badge">OpenCV</span>
+                <span class="tech-badge">Flask</span>
+            </div>
+            
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text); margin-bottom: 30px;">
+                This project focuses on detecting manipulated or AI-generated deepfake videos to combat misinformation
+                and enhance digital media security. It uses advanced <strong>Convolutional Neural Networks (CNNs)</strong> and
+                <strong>frame-level feature extraction</strong> to identify subtle irregularities that distinguish real and fake content.
+            </p>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Video Frame Analysis:</strong> Extracts and processes individual frames to detect visual inconsistencies.</li>
+                <li><strong>Deep Learning Model:</strong> Uses a CNN-based model trained on real and fake video datasets for high accuracy.</li>
+                <li><strong>Facial Landmark Detection:</strong> Identifies abnormal blinking, lighting, and face blending patterns.</li>
+                <li><strong>Web Interface:</strong> Built using Flask to upload videos and visualize detection results interactively.</li>
+                <li><strong>Confidence Score Output:</strong> Displays the likelihood percentage of a video being fake or real.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sanjana. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html>
+
