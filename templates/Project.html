@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/project">Project</a>
+    </nav>
+    <section id="projects">
+    <div class="container"> 
+    <h2>MY PROJECTS</h2> 
+    <div class="pr1">
+        <div class="card">
+        <h3><a href="/p1">Travel Guidance App</a></h3>
+    </div>  
+    
+    <div class="card">
+        <h3><a href="/p2">Milk Management App</a></h3>
+    </div> 
+    <div class="card">
+        <h3><a href="/p3">College bus reservation system</a></h3>
+    </div> 
+    </section>
+     <div class="cont">
+    <h5>Have a question?</h5> 
+        <form id="contact-form">
+            <input type="text" placeholder="Name" required/><br>
+            <input type="text" placeholder="Email" required/><br>
+            <input type="text" placeholder="Message" required/><br>
+            <button type="submit" class="btn">submit</button>
+        </form>
+    </div>
+     <footer>
+         <p>&copy; 2025 Sanjana. All rights reserved.</p>
+    </footer>
+</body>
+</html>
