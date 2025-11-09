@@ -16,62 +16,72 @@
     </nav>
 
     <div class="about-container">
-        <div class="about-header">
-            <h2>About Me</h2>
-        </div>
-
-        <div class="about-intro">
-            <p>I'm a dedicated engineering student specializing in Artificial Intelligence and Machine Learning. Beyond academics, I'm deeply interested in Robotics and Drone Technology, and I enjoy exploring how hardware and software work together to create innovative solutions.</p>
-            <p style="margin-top: 20px;">My dream is to become a skilled software developer, combining my interests in AI, robotics, drones, and web development to contribute to impactful, innovative solutions.</p>
-        </div>
-
-        <img src="{{ url_for('static', filename='imag.jpg') }}" alt="Sanjana" class="prof-img">
-
-        <div class="about-content">
-            <div class="about-card">
-                <h3>Skills</h3>
-                <div class="skills-grid">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">C</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Figma</span>
-                    <span class="skill-tag">AI</span>
-                </div>
+        <div class="about-layout">
+            <!-- Left Column: Profile Image -->
+            <div class="profile-image-wrapper">
+                <img src="{{ url_for('static', filename='imag.jpg') }}" alt="Sanjana" class="profile-image">
             </div>
 
-            <div class="about-card">
-                <h3>Education</h3>
-                <div class="education-item">
-                    <strong>B.E. in Artificial Intelligence and Machine Learning</strong>
-                    <p>Shri Madhwa Vadiraja Institute of Technology and Management</p>
-                    <p style="color: var(--primary-color); margin-top: 5px;">Ongoing (2023 - 2027)</p>
+            <!-- Right Column: Info Box -->
+            <div class="info-box fade-in">
+                <!-- Contact Section -->
+                <div class="info-section">
+                    <h3 class="section-header">Contact</h3>
+                    <div class="contact-info">
+                        <p>📍 Udupi, Karnataka</p>
+                        <p>📞 8310718550</p>
+                        <p>✉️ sanjanaps2005@gmail.com</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="about-card">
-                <h3>Interests</h3>
-                <div class="interest-item">
-                    <strong>AI Engineering</strong>
-                    <p>Exploring intelligent systems and modern AI tools</p>
+                <!-- About Me Section -->
+                <div class="info-section">
+                    <h3 class="section-header">About Me</h3>
+                    <p class="about-text">I'm a 3rd-year B.E. student in Artificial Intelligence and Machine Learning with a CGPA of 8.7/10. Passionate about building intelligent solutions, I've developed projects like a Smart Traffic Management System and Deepfake Detection. Skilled in Python, and Web Development, I combine strong technical skills with teamwork and leadership through academic projects and hackathon participation.</p>
                 </div>
-                <div class="interest-item">
-                    <strong>Web Development</strong>
-                    <p>Building clean, user-friendly websites and applications</p>
+
+                <!-- Skills Section -->
+                <div class="info-section">
+                    <h3 class="section-header">Skills</h3>
+                    <div class="skills-content">
+                        <p><strong>Programming Languages:</strong> Python, Java, C, SQL</p>
+                        <p><strong>Web Development:</strong> HTML5, CSS, JavaScript</p>
+                        <p><strong>Design Tools:</strong> Figma</p>
+                        <p><strong>Core Concepts:</strong> Artificial Intelligence, Data Handling</p>
+                        <p><strong>Soft Skills:</strong> Leadership and Team Coordination, Project Management, Problem-Solving</p>
+                        <p><strong>Languages Known:</strong> English, Kannada, Malayalam</p>
+                    </div>
                 </div>
-                <div class="interest-item">
-                    <strong>Robotics</strong>
-                    <p>Creating autonomous systems and intelligent machines</p>
+
+                <!-- Education Section -->
+                <div class="info-section">
+                    <h3 class="section-header">Education</h3>
+                    <div class="education-content">
+                        <p><strong>CGPA:</strong> 8.7 / 10</p>
+                        <p><strong>Duration:</strong> 2023 – 2027</p>
+                        <p><strong>Degree:</strong> Bachelor of Engineering (B.E.) in Artificial Intelligence and Machine Learning</p>
+                        <p><strong>Institute:</strong> Shri Madhwa Vadiraja Institute of Technology and Management</p>
+                    </div>
                 </div>
-                <div class="interest-item">
-                    <strong>Travel</strong>
-                    <p>Exploring new places and cultures</p>
+
+                <!-- Experience Section -->
+                <div class="info-section">
+                    <h3 class="section-header">Experience</h3>
+                    <ul class="experience-list">
+                        <li><strong>Project Leadership:</strong> Led and coordinated multiple team-based AI/ML projects, ensuring timely completion and effective collaboration.</li>
+                        <li><strong>Hackathon Participation:</strong> Developed innovative ML solutions for deepfake detection and presented AI concepts effectively to diverse audiences.</li>
+                    </ul>
+                </div>
+
+                <!-- Certificates & Awards Section -->
+                <div class="info-section">
+                    <h3 class="section-header">Certificates & Awards</h3>
+                    <ul class="certificates-list">
+                        <li>Responsive Web Development with HTML5, CSS3, JavaScript — <em>Infosys Springboard</em></li>
+                        <li>Introduction to Artificial Intelligence — <em>LinkedIn Learning</em></li>
+                        <li>Python, JavaScript, SQL Certification — <em>HackerRank</em></li>
+                        <li><strong>Academic Recognition:</strong> Letter of Appreciation for Outstanding Academic Performance in Semester Examinations.</li>
+                    </ul>
                 </div>
             </div>
         </div>
