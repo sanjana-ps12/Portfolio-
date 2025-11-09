@@ -219,44 +219,74 @@ nav a.active {
 .profile-image-wrapper {
     position: sticky;
     top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .profile-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 280px;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-image:hover {
     transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(108, 99, 255, 0.3);
 }
 
-/* Info Box - Frosted Glass */
-.info-box {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #6C63FF;
+/* About Content Wrapper */
+.about-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Standalone Info Sections (Contact & About Me) */
+.info-section-standalone {
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Transparent Box with Hover Effect */
+.info-box-transparent {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(108, 99, 255, 0.2);
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: all 0.4s ease;
 }
 
-.info-box.visible {
+.info-box-transparent.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-[data-theme="dark"] .info-box {
-    background: rgba(26, 26, 26, 0.85);
-    border-left-color: #6C63FF;
+.info-box-transparent:hover {
+    background: rgba(108, 99, 255, 0.15);
+    border-color: rgba(108, 99, 255, 0.5);
+    box-shadow: 0 12px 40px rgba(108, 99, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+[data-theme="dark"] .info-box-transparent {
+    background: rgba(26, 26, 26, 0.2);
+    border-color: rgba(108, 99, 255, 0.3);
+}
+
+[data-theme="dark"] .info-box-transparent:hover {
+    background: rgba(108, 99, 255, 0.2);
+    border-color: rgba(108, 99, 255, 0.6);
 }
 
 /* Info Sections */
@@ -420,11 +450,11 @@ nav a.active {
 
     .profile-image {
         max-width: 100%;
-        max-width: 350px;
+        max-width: 300px;
     }
 
-    .info-box {
-        margin-top: 20px;
+    .about-content-wrapper {
+        gap: 25px;
     }
 }
 
@@ -433,8 +463,8 @@ nav a.active {
         padding: 80px 20px 30px;
     }
 
-    .info-box {
-        padding: 20px;
+    .info-box-transparent {
+        padding: 24px;
     }
 
     .section-header {
